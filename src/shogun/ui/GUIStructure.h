@@ -31,9 +31,9 @@ class CGUIStructure : public CSGObject
 		/** constructor */
 		CGUIStructure() {};
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIStructure(CSGInterface* interface);
+		CGUIStructure(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUIStructure();
 

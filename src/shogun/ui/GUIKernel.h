@@ -27,9 +27,9 @@ class CGUIKernel : public CSGObject
 	/** constructor */
 	CGUIKernel() { };
 	/** constructor
-	 * @param interface
+	 * @param sg_interface
 	 */
-	CGUIKernel(CSGInterface* interface);
+	CGUIKernel(CSGInterface* sg_interface);
 
 	/** destructor */
 	~CGUIKernel();

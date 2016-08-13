@@ -29,9 +29,9 @@ class CGUIPluginEstimate : public CSGObject
 		/** constructor */
 		CGUIPluginEstimate();
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIPluginEstimate(CSGInterface* interface);
+		CGUIPluginEstimate(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUIPluginEstimate();
 

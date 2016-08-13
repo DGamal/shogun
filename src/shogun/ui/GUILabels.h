@@ -27,9 +27,9 @@ class CGUILabels : public CSGObject
 		/** constructor */
 		CGUILabels() {};
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUILabels(CSGInterface* interface);
+		CGUILabels(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUILabels();
 

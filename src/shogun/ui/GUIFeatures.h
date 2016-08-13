@@ -46,9 +46,9 @@ class CGUIFeatures : public CSGObject
 		/** constructor */
 		CGUIFeatures() {};
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIFeatures(CSGInterface* interface);
+		CGUIFeatures(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUIFeatures();
 

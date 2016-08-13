@@ -27,9 +27,9 @@ class CGUIClassifier : public CSGObject
 		/** constructor */
 		CGUIClassifier() { };
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIClassifier(CSGInterface* interface);
+		CGUIClassifier(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUIClassifier();
 

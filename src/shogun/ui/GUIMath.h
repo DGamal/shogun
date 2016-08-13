@@ -25,9 +25,9 @@ class CGUIMath : public CSGObject
 		/** constructor */
 		CGUIMath() {};
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIMath(CSGInterface* interface);
+		CGUIMath(CSGInterface* sg_interface);
 		/** set threshold
 		 * @param value
 		 */

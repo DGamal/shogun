@@ -26,9 +26,9 @@ class CGUITime : public CSGObject
 		/** constructor */
 		CGUITime() { };
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUITime(CSGInterface* interface);
+		CGUITime(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUITime();
 

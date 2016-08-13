@@ -28,9 +28,9 @@ class CGUIDistance : public CSGObject
 	/** constructor */
 	CGUIDistance() {};
 	/** constructor
-	 * @param interface
+	 * @param sg_interface
 	 */
-	CGUIDistance(CSGInterface* interface);
+	CGUIDistance(CSGInterface* sg_interface);
 	/** destructor */
 	~CGUIDistance();
 

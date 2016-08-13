@@ -29,9 +29,9 @@ class CGUIHMM : public CSGObject
 		/** constructor */
 		CGUIHMM() { };
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIHMM(CSGInterface* interface);
+		CGUIHMM(CSGInterface* sg_interface);
 		/** destructor */
 		~CGUIHMM();
 

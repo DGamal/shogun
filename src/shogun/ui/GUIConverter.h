@@ -31,9 +31,9 @@ class CGUIConverter : public CSGObject
 		};
 
 		/** constructor
-		 * @param interface
+		 * @param sg_interface
 		 */
-		CGUIConverter(CSGInterface* interface);
+		CGUIConverter(CSGInterface* sg_interface);
 
 		/** create LLE */
 		bool create_locallylinearembedding(int32_t k);

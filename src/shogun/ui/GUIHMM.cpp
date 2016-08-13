@@ -19,7 +19,9 @@
 #include <shogun/labels/RegressionLabels.h>
 #include <shogun/mathematics/Statistics.h>
 
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 
 using namespace shogun;
 

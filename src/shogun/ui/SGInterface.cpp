@@ -42,7 +42,7 @@
 
 using namespace shogun;
 
-CSGInterface* interface=NULL;
+CSGInterface* sg_interface=NULL;
 CSyntaxHighLight hilight;
 
 #if defined(HAVE_CMDLINE)
@@ -7675,7 +7675,7 @@ bool CSGInterface::cmd_send_command()
 			// fix-up m_nrhs; +1 to include command
 			m_nrhs=get_num_args_in_str()+1;
 
-			if (!(interface->*(sg_methods[i].method))())
+			if (!(sg_interface->*(sg_methods[i].method))())
 			{
 				SG_ERROR("Usage: %s%s%s\n\n\t%s%s%s%s%s\n",
 						hilight.get_command_prefix(),
@@ -7985,7 +7985,7 @@ bool CSGInterface::handle()
 #endif
 
 	char* command=NULL;
-	command=interface->get_command(len);
+	command=sg_interface->get_command(len);
 
 	SG_DEBUG("command: %s, nrhs %d\n", command, m_nrhs)
 	int32_t i=0;
@@ -7998,7 +7998,7 @@ bool CSGInterface::handle()
 					sg_methods[i].command,
 					hilight.get_command_suffix());
 
-			if (!(interface->*(sg_methods[i].method))())
+			if (!(sg_interface->*(sg_methods[i].method))())
 			{
 				if (sg_methods[i].usage_prefix)
 				{
