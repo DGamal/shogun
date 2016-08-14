@@ -29,7 +29,9 @@
 #include <shogun/classifier/svm/SVM.h>
 
 #include <string.h>
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <shogun/mathematics/Math.h>
 
 #ifdef HAVE_PTHREAD
@@ -1359,7 +1361,11 @@ SGMatrix<T> CKernel::get_kernel_matrix()
 
 	result=SG_MALLOC(T, total_num);
 
+#ifdef HAVE_PTHREAD
 	int32_t num_threads=parallel->get_num_threads();
+#else
+	int32_t num_threads=1;
+#endif
 	if (num_threads < 2)
 	{
 		K_THREAD_PARAM<T> params;
@@ -1377,6 +1383,7 @@ SGMatrix<T> CKernel::get_kernel_matrix()
 	}
 	else
 	{
+#ifdef HAVE_PTHREAD
 		pthread_t* threads = SG_MALLOC(pthread_t, num_threads-1);
 		K_THREAD_PARAM<T>* params = SG_MALLOC(K_THREAD_PARAM<T>, num_threads);
 		int64_t step= total_num/num_threads;
@@ -1429,6 +1436,9 @@ SGMatrix<T> CKernel::get_kernel_matrix()
 
 		SG_FREE(params);
 		SG_FREE(threads);
+#else
+		SG_SERROR("Cannot parallelize without pthread");
+#endif
 	}
 
 	SG_DONE()
