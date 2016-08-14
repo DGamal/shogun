@@ -12,6 +12,7 @@
 #include <shogun/lib/RefCount.h>
 #include <shogun/lib/config.h>
 #include <shogun/lib/memory.h>
+#include <shogun/io/SGIO.h>
 
 #if defined(LINUX) && defined(_SC_NPROCESSORS_ONLN)
 #include <unistd.h>

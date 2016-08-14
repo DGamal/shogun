@@ -19,6 +19,11 @@
 #include <stdio.h>
 #include <sys/types.h>
 
+#ifdef _MSC_VER
+#define NOMINMAX
+#include <windows.h>
+#endif
+
 #include <shogun/lib/config.h>
 
 /**@name Standard Types
@@ -65,6 +70,11 @@ typedef int32_t index_t;
 #include <complex>
 
 typedef std::complex<float64_t> complex128_t;
+
+#ifdef _WIN32
+#include <BaseTsd.h>
+typedef SSIZE_T ssize_t;
+#endif
 
 #include <shogun/lib/memory.h>
 #endif //__COMMON_H__
