@@ -7,7 +7,9 @@
  * Written (W) 2013 Thoralf Klein <thoralf.klein@zib.de>
  */
 
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <gtest/gtest.h>
 
 #include <shogun/io/streaming/StreamingAsciiFile.h>

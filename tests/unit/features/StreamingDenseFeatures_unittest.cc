@@ -10,7 +10,9 @@
 #include <shogun/features/streaming/StreamingDenseFeatures.h>
 #include <shogun/io/CSVFile.h>
 #include <shogun/io/streaming/StreamingAsciiFile.h>
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <gtest/gtest.h>
 
 using namespace shogun;
